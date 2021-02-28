@@ -1,0 +1,824 @@
+$mainColor: #FFD300;
+$secondaryColor: #232323;
+
+body {
+  font-family: sans-serif;
+}
+
+.navbar {
+  background-color: $mainColor;
+  z-index: 99999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  button {
+    float: right;
+    position: absolute;
+    top: 25px;
+    right: 15%;
+    border: 0;
+    border-radius: 0;
+    border-color: transparent;
+  }
+
+
+  .selectedPage {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    padding: 5px;
+    padding-left: 10px;
+
+  }
+
+  span {
+    //background-color: #fff;
+  }
+
+  @media (max-width: 992px) {
+    .selectedPage {
+      display: inline-block;
+      width: 800px;
+      border-radius: 10px;
+    }
+    .nav-item {
+      text-align: left;
+      padding: 18px;
+      transition: all 0.5s ease-in-out;
+
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+    }
+    .navbar .navbar-nav .nav-item .nav-link {
+      font-size: 10px;
+    }
+  }
+  @media (min-width: 992px) {
+    .selectedPage {
+      display: none;
+    }
+  }
+
+  .navbar-nav {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+    float: none;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: $secondaryColor;
+    font-size: 24px;
+    padding: 0 10px;
+    font-family: 'Itim', cursive;
+
+  }
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 0;
+
+    button {
+      top: 3px;
+      right: 7%;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .navbar {
+    padding: 0;
+
+    button {
+      top: 3px;
+      right: 13%;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar {
+    padding: 0;
+
+    button {
+      top: 3px;
+      right: 13%;
+    }
+
+
+    span {
+
+    }
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+
+.homepage {
+  background: url("../images/shutterstock_484184632.jpg") no-repeat center center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .56);
+    z-index: 2;
+  }
+
+  .content {
+    width: 600px;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 2%;
+    left: 28%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text-content {
+    position: absolute;
+    z-index: 3;
+    left: 30%;
+    top: 55%;
+    padding: 20px;
+    text-align: center;
+
+
+    p {
+      color: $secondaryColor;
+      font-size: 35px;
+      font-family: "Grand Hotel", Handwriting;
+      padding-bottom: 10px;
+    }
+
+  }
+
+  .ordering {
+    position: absolute;
+    z-index: 3;
+    left: 32%;
+    top: 70%;
+    padding: 20px;
+    text-align: center;
+
+    a {
+      background-color: $mainColor;
+      color: $secondaryColor;
+      font-size: 25px;
+      box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+      margin-right: 10px;
+
+      border: none;
+      text-align: center;
+      padding: 16px;
+      width: 260px;
+      transition: all 0.5s;
+
+      &:after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f054';
+        font-weight: bold;
+        font-size: 25px;
+        margin-right: 5px;
+        color: $secondaryColor;
+        position: relative;
+        padding-left: 10px;
+        transition: all 0.7s ease 0s;
+        opacity: 0;
+        right: 20px;
+      }
+
+      &:hover {
+        padding-right: 24px;
+        padding-left: 8px;
+      }
+
+      &:hover:after {
+        opacity: 1;
+        right: -10px;
+      }
+
+    }
+
+
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .text-content {
+      left: 25%;
+    }
+    .ordering {
+      left: 25%;
+    }
+
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .text-content {
+      left: 20%;
+    }
+    .content {
+      width: 600px;
+      height: 100%;
+      position: absolute;
+      z-index: 3;
+      top: 5%;
+      left: 22%;
+
+      img {
+        width: 90%;
+      }
+    }
+    .ordering {
+      left: 22%;
+    }
+
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .content {
+      width: 600px;
+      height: 100%;
+      position: absolute;
+      z-index: 3;
+      top: 5%;
+      left: 18%;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .text-content {
+      top: 43%;
+      left: 25%;
+
+      p {
+        font-size: 20px;
+      }
+    }
+    .ordering {
+      top: 50%;
+      left: 27%;
+    }
+
+    .ordering a {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .ordering a:first-of-type {
+      padding: 20px 8px !important;
+      font-size: 20px;
+      width: 220px;
+      margin-left: 13px;
+    }
+
+  }
+  @media (max-width: 577.98px) {
+    .content {
+      width: 600px;
+      height: 100%;
+      position: absolute;
+      z-index: 3;
+      top: 5%;
+      left: 15%;
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .text-content {
+      top: 38%;
+      left: 15%;
+
+      p {
+        font-size: 23px;
+      }
+    }
+    .ordering {
+      top: 45%;
+      left: 25%;
+
+    }
+
+    .ordering a {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .ordering a:first-of-type {
+      padding: 20px 8px !important;
+      font-size: 20px;
+      width: 220px;
+      margin-left: 13px;
+    }
+
+  }
+
+  .arrowToExtraTasty {
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+    left: 50%;
+    top: 74%;
+    z-index: 99999;
+  }
+
+  @media (max-width: 577.98px) {
+    .arrowToExtraTasty {
+
+      left: 48%;
+      top: 74%;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .arrowToExtraTasty {
+      left: 45%;
+      top: 77%;
+    }
+
+
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .arrowToExtraTasty {
+      text-align: center;
+      left: 50%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .arrowToExtraTasty {
+      left: 48%;
+    }
+  }
+
+}
+
+// Start Pop Up
+.modal {
+  margin-top: 50px;
+
+  .close {
+    position: absolute;
+    left: 80%;
+    color: aliceblue;
+    font-size: 60px;
+  }
+
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .modal {
+    margin-top: 200px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .modal {
+    margin-top: 150px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .modal {
+    margin-top: 100px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// End Pop Up
+
+
+.extra-tasty {
+  background: url("../images/shutterstock_274430639.png") no-repeat;
+  //height: 600px;
+  padding-bottom: 70px;
+
+  h3 {
+    padding-top: 60px;
+    font-family: "Grand Hotel", Handwriting;
+    font-size: 35px;
+  }
+
+  p {
+    padding-bottom: 20px;
+    font-size: 15px;
+    color: #000;
+  }
+
+  .tasty-item {
+    //width: 500px;
+  }
+
+  .tasty-item img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .full-menu {
+    padding-top: 80px;
+    display: inline-block;
+  }
+
+  .full-menu a {
+    background-color: $mainColor;
+    color: $secondaryColor;
+    font-size: 25px;
+    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    padding: 20px;
+    width: 260px;
+    transition: all 0.5s;
+    font-weight: 500;
+
+    &:after {
+      font-family: "Font Awesome 5 Free";
+      content: '\f054';
+      font-weight: bold;
+      font-size: 25px;
+      margin-right: 5px;
+      color: $secondaryColor;
+      position: relative;
+      padding-left: 10px;
+      transition: all 0.7s ease 0s;
+      opacity: 0;
+      right: 20px;
+    }
+
+    &:hover {
+      padding-right: 24px;
+      padding-left: 20px;
+    }
+
+    &:hover:after {
+      opacity: 1;
+      right: -10px;
+    }
+
+
+    /**/
+
+  }
+}
+
+.toOrder {
+  background-color: $secondaryColor;
+  height: 350px;
+  padding-top: 40px;
+
+  h3 {
+    padding-top: 20px;
+    color: #fff;
+    margin: 50px 0;
+    font-family: "Grand Hotel", Handwriting;
+    font-size: 35px;
+  }
+
+  .get-started a {
+
+    background-color: $mainColor;
+    color: $secondaryColor;
+    font-size: 25px;
+    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    padding: 20px;
+    width: 260px;
+    transition: all 0.5s;
+    font-weight: 500;
+    border-radius: 10px;
+
+    &:after {
+      font-family: "Font Awesome 5 Free";
+      content: '\f054';
+      font-weight: bold;
+      font-size: 25px;
+      margin-right: 5px;
+      color: $secondaryColor;
+      position: relative;
+      padding-left: 10px;
+      transition: all 0.7s ease 0s;
+      opacity: 0;
+      right: 20px;
+    }
+
+    &:hover {
+      padding-right: 24px;
+      padding-left: 20px;
+    }
+
+    &:hover:after {
+      opacity: 1;
+      right: -10px;
+    }
+
+  }
+}
+
+
+.about-us {
+  background: url("../images/shutterstock_274430639.png") no-repeat;
+  //height: 1000px;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 70px;
+
+  .circle-icon {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 150px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+  }
+
+  .circle-icon svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  h3 {
+    padding-top: 70px;
+    font-family: "Grand Hotel", Handwriting;
+    font-size: 35px;
+  }
+
+  .about {
+    background-color: #fff;
+    padding: 10px 20px 20px 20px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.45);
+    margin: 50px;
+  }
+
+  .about p {
+    color: #000;
+    font-size: 100%;
+    letter-spacing: .2px;
+    padding-bottom: 20px;
+    line-height: 1.9em;
+    font-weight: bold;
+
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .about-us {
+    .circle-icon {
+      top: 4%;
+      left: 35%;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-us {
+    .circle-icon {
+      top: 5%;
+      left: 37%;
+    }
+  }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .about-us {
+    .circle-icon {
+      top: 6%;
+      left: 42%;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .about-us {
+    .circle-icon {
+      top: 7%;
+      left: 42%;
+    }
+  }
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .about-us {
+    .circle-icon {
+      top: 8%;
+      left: 45%;
+    }
+  }
+}
+
+.contact {
+  background: url("../images/pancakes.jpg") no-repeat fixed;
+  //height: 600px;
+  padding-top: 20px;
+  padding-bottom: 120px;
+
+  .contact-item {
+    margin-top: 100px;
+    background-color: #ECECEC;
+    padding: 60px 20px 90px 20px;
+    margin-right: 2px;
+    height: 350px;
+
+    i.main {
+      position: absolute;
+      top: 12%;
+      left: 35%;
+      background-color: #000;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 50px;
+      margin: 20px;
+      padding: 15px;
+    }
+
+    a {
+      padding-left: 15px;
+      padding-top: 50px;
+    }
+
+    p {
+      color: #000;
+      font-size: 17px;
+      padding-top: 5px;
+      font-weight: bolder;
+    }
+
+    i.contact-font {
+      padding: 10px;
+      font-size: 25px;
+      color: #000;
+      border-radius: 50%;
+      border: 2px solid $secondaryColor;
+      margin-top: 20px;
+    }
+
+    h4 {
+      border-bottom: 5px solid $secondaryColor;
+      padding-bottom: 20px;
+      font-family: "Grand Hotel", Handwriting;
+      font-size: 35px;
+    }
+
+    b {
+      padding-bottom: 10px;
+      font-size: 20px;
+    }
+
+    span {
+      display: block;
+      color: #181700;
+      font-size: 15px;
+      font-weight: bold;
+      padding-bottom: 10px;
+
+    }
+  }
+
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .contact {
+    .contact-item {
+      i.main {
+        top: 10%;
+        left: 39%;
+      }
+    }
+  }
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .contact {
+    .contact-item {
+      i.main {
+        top: 10%;
+        left: 39%;
+      }
+    }
+  }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contact {
+    .contact-item {
+      i.main {
+        top: 12%;
+        left: 42%;
+      }
+    }
+  }
+}
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .contact {
+    .contact-item {
+      i.main {
+        top: 12%;
+        left: 30%;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+.google-map {
+  margin: 0;
+}
+
+.footer {
+  background-color: #171717;
+  color: #666666;
+  padding: 25px 0 5px;
+  margin-top: -20px;
+  display: block;
+
+  a {
+    color: $mainColor;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+
+  }
+
+  i {
+    color: $mainColor;
+    font-size: 20px;
+  }
+}
+
+
+
+

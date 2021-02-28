@@ -1,0 +1,22 @@
+.menu {
+  background-color: #AD2A23;
+}
+.menu .menu-item {
+  padding-top: 100px;
+}
+.menu .menu-item div {
+  font-size: 35px;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.menu .menu-item div a {
+  text-decoration: none;
+  color: #000;
+}
+.menu .menu-item img {
+  width: 100%;
+  margin-bottom: 90px;
+}
+
+/*# sourceMappingURL=menu.css.map */
